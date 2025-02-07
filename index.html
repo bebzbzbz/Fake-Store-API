@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Fake Store Project</title>
+    <script type="module" src="./src/assets/ts/renderItems.ts"></script>
+    <script type="module" src="./src/assets/ts/cart.ts"></script>
+    <script type="module" src="./src/assets/ts/filter.ts"></script>
+    <link rel="stylesheet" href="./src/assets/css/styles.css">
+</head>
+<body>
+    <header class="flex">
+        <a href="" class="logo">Fake store</a>
+        <nav class="flex">
+            <div class="filters flex">
+                <p>Filter by categories:</p>
+                <button id="filter-electro">electronics</button>
+                <button id="filter-jewelery">jewelery</button>
+                <button id="filter-women">women's clothing</button>
+                <button id="filter-men">men's clothing</button>
+                <button id="filter-all">all</button>
+            </div>
+            <div class="search-sort">
+                <input type="text" id="search-input" placeholder="Search by title...">
+                <select id="sort-by">
+                    <option value="">Sort by</option>
+                    <option value="highest-price">Highest price</option>
+                    <option value="lowest-price">Lowest price</option>
+                    <option value="title-up">Title up</option>
+                    <option value="title-down">Title down</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+    <main class="grid">
+        <div id="item-area" class="grid"></div>
+        <div id="cart-area" class="flex">
+            <img src="./src/assets/img/cart.svg">
+            <div id="cart-index-wrapper">
+                <p id="cart-index"></p>
+            </div>
+            <ul id="cart-list"></ul>
+            <p id="total">Total: 0 €</p>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,1 @@
+<img src="./src/assets/img/fakestore.png">

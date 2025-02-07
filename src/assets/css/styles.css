@@ -1,0 +1,170 @@
+/* = GENERAL */
+@font-face {
+    font-family: "Staatliches";
+    src: url(../fonts/Staatliches-Regular.ttf);
+}
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    padding: 3rem 3%;
+}
+
+input, button, select {
+    font-family: "Roboto", sans-serif;
+    padding: .3rem .5rem;
+    border: 1px solid black;
+    height: 40px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    width: 85%;
+    text-align: right;
+}
+li {
+    margin-bottom: 1rem;
+}
+
+/* = CLASSES */
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+/* = HEADER */
+
+header {
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 3rem;
+    color: black;
+    font-family: "Staatliches", sans-serif;
+}
+
+nav {
+    gap: .5rem;
+    align-items: center;
+}
+
+.filters {
+    gap: .5rem;
+    align-items: center;
+}
+
+nav button {
+    transition: opacity .2s ease;
+}
+nav button:hover {
+    opacity: .8;
+}
+
+/* = ITEM AREA */
+
+main {
+    grid-template-columns: 5fr 1fr;
+    gap: 2rem;
+}
+
+#item-area {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6rem;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.item img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+}
+
+.price {
+    position: absolute;
+    font-size: 1.2rem;
+    top: 42%;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: .5rem 1rem;
+}
+
+/* = CART AREA */
+
+#cart-area {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-end;
+    right: 2.5%;
+    position: fixed;
+    width: 15%;
+    overflow-y: auto;
+    height: 70vh;
+    padding-right: 1rem;
+}
+
+.add-to-cart-btn {
+    background-color: transparent;
+    color: black;
+    transition: background-color .2s ease, color .2s ease;
+}
+.add-to-cart-btn:hover {
+    background-color: black;
+    color: white
+}
+
+.cart img {
+    width: 40px;
+    height: 40px;
+}
+#cart-index-wrapper {
+    position: absolute;
+    right: 17px;
+    top: 25px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    height: 20px;
+    width: 20px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#total {
+    font-weight: bold;
+}
+
+ul button {
+    background-color: transparent;
+    color: black;
+    padding: 0;
+    border: none;
+    margin-left: .5rem;
+}
